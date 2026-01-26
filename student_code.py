@@ -41,7 +41,12 @@ def calculate_cumulative_performance(scores: dict):
     Returns:
     dict: A dictionary containing the average score and a list of subjects where the score is below average.
     """
-    
+    allnum = []
+    for k,v in scores.items():
+        allnum.append(v)
+    ava = round(sum(allnum)/len(allnum),2)
+    return {"average":ava, "below_average":[sjb for sjb,v in scores.items() if v < ava]}
+
 
 def analyze_improvement(scores: list):
     """
