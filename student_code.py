@@ -28,8 +28,7 @@ def evaluate_performance(grades: list, min_pass: int):
     Returns:
     str: "Pass" if the average grade is greater than or equal to min_pass, otherwise "Fail".
     """
-    for grd in grades:
-        return 'Pass' if grd >= min_pass else 'Fail'
+    return 'Pass' if (sum(grades)/len(grades)) >= min_pass else 'Fail'
     
 
 def calculate_cumulative_performance(scores: dict):
@@ -42,7 +41,7 @@ def calculate_cumulative_performance(scores: dict):
     Returns:
     dict: A dictionary containing the average score and a list of subjects where the score is below average.
     """
-    pass
+    
 
 def analyze_improvement(scores: list):
     """
