@@ -59,7 +59,19 @@ def analyze_improvement(scores: list):
     dict: A dictionary containing the trend of improvement ("positive", "negative", or "neutral") 
           and a boolean indicating whether there has been an improvement.
     """
-    pass
+    trend = ''
+    if scores[0]>scores[1]:
+        trend = "positive" 
+    elif scores[0]==scores[1]:
+        trend = "neutral"
+    else:
+        trend =  "negative"
+
+    
+    return {
+        "trend":  trend,
+        "improved": True
+    }
 
 def rank_students(students: list[tuple[str, int]]):
     """
@@ -84,7 +96,7 @@ def even_numbers(n: int):
     Returns:
     list: A list of even integers from 1 to n.
     """
-    pass
+    return [n for n in range(1,n+1) if n % 2 == 0]
 
 def odd_numbers(n: int):
     """
@@ -96,9 +108,10 @@ def odd_numbers(n: int):
     Returns:
     list: A list of odd integers from 1 to n.
     """
-    pass
+    return [n for n in range(1,n+1) if n % 2 != 0]
 
 def sum_multiples_of_num(num: int, length: int):
+    
     """
     Calculate the sum of multiples of a given number up to a specified length.
 
@@ -109,7 +122,7 @@ def sum_multiples_of_num(num: int, length: int):
     Returns:
     int: The sum of multiples of num from 1 to length.
     """
-    pass
+    # return sum([n for n in range(1,length) if n % num == 0])
 
 def skip_num(n: int, length: int):
     """
