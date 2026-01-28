@@ -1,4 +1,6 @@
 """Learning Outcome: Functions"""
+import statistics
+from collections import Counter
 def sum_of_squares(n: int):
     """
     Calculate the sum of the squares of all integers from 1 to n.
@@ -184,7 +186,7 @@ def sum_dictionary_values(dictionary: dict):
     Returns:
     int: The sum of all values in the dictionary.
     """
-    pass
+    return sum(dictionary.values())
 
 def sum_unique_elements(elements: list):
     """
@@ -196,7 +198,7 @@ def sum_unique_elements(elements: list):
     Returns:
     int: The sum of unique integers in the list.
     """
-    pass
+    return sum(set(elements))
 
 def skip_divisible_by_num(n: int, length: int):
     """
@@ -209,7 +211,7 @@ def skip_divisible_by_num(n: int, length: int):
     Returns:
     list: A list of integers from 1 to length, excluding those divisible by n.
     """
-    pass
+    return [num for num in range(1, length+1) if num % n != 0]
 
 """Learning Outcome: Processing Data"""
 
@@ -223,7 +225,7 @@ def square_numbers(nums: list):
     Returns:
     list: A list containing the squares of the input integers.
     """
-    pass
+    return list(map(lambda n: n**2,nums))
 
 def transform_string(input: str, transform: str):
     """
@@ -239,8 +241,7 @@ def transform_string(input: str, transform: str):
     Raises:
     ValueError: If the transformation type is unknown.
     """
-    pass
-
+    return input.capitalize() if transform == 'Capitalize' else input.upper() if transform == 'Uppercase' else input.lower()
 def sum_and_average(nums: list[int]):
     """
     Calculate the sum and average of a list of numbers.
@@ -251,7 +252,7 @@ def sum_and_average(nums: list[int]):
     Returns:
     tuple: A tuple containing the sum and average of the numbers.
     """
-    pass
+    return (sum(nums),sum(nums)/len(nums))
 
 def word_frequency_count(words: list[str]):
     """
@@ -263,7 +264,7 @@ def word_frequency_count(words: list[str]):
     Returns:
     dict: A dictionary with words as keys and their frequencies as values.
     """
-    pass
+    return Counter(words)
 
 def filter_even_numbers(nums: list[int]):
     """
@@ -275,7 +276,7 @@ def filter_even_numbers(nums: list[int]):
     Returns:
     list: A list containing only the even integers from the input list.
     """
-    pass
+    return [n for n in nums if n % 2 == 0]
 
 """Learning Outcome: Simple Algorithms(Problem Solving)"""
 
@@ -292,7 +293,10 @@ def find_median(nums: list[int]):
     Raises:
     ValueError: If the list is empty.
     """
-    pass
+    if len(nums) > 0 :
+        return statistics.median(nums)
+    else:
+        raise ValueError
 
 def reverse_string(input: str):
     """
@@ -304,7 +308,7 @@ def reverse_string(input: str):
     Returns:
     str: The reversed string.
     """
-    pass
+    return input[::-1]
 
 def largest_number(nums: list[int]):
     """
@@ -316,7 +320,7 @@ def largest_number(nums: list[int]):
     Returns:
     int or None: The largest number in the list, or None if the list is empty.
     """
-    pass
+    return max(nums) if len(nums) != 0 else None
 
 def is_prime(n: int):
     """
@@ -328,7 +332,7 @@ def is_prime(n: int):
     Returns:
     bool: True if the number is prime, False otherwise.
     """
-    pass
+    return True if len([num for num in range(1,n+1) if n % num == 0] )== 2 else False
 
 def count_character_occurrences(word_sentence: str, char_count: str):
     """
@@ -341,4 +345,4 @@ def count_character_occurrences(word_sentence: str, char_count: str):
     Returns:
     int: The number of occurrences of the character in the sentence.
     """
-    pass
+    return word_sentence.count(char_count)
