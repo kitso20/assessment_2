@@ -162,7 +162,7 @@ def sum_numbers_until_zero(nums: list):
     Returns:
     int: The sum of integers in the list up to (but not including) the first zero.
     """
-    pass
+    
 
 def count_positive_numbers(nums: list):
     """
@@ -174,7 +174,7 @@ def count_positive_numbers(nums: list):
     Returns:
     int: The count of positive integers in the list.
     """
-    pass
+    return len([i for i in nums if i > 0])
 
 def sum_dictionary_values(dictionary: dict):
     """
