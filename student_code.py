@@ -162,7 +162,9 @@ def sum_numbers_until_zero(nums: list):
     Returns:
     int: The sum of integers in the list up to (but not including) the first zero.
     """
-    
+    joined = "".join(str(item) for item in nums)
+    splied = joined.split('0')    
+    return sum([int(item) for item in list(splied[0])])
 
 def count_positive_numbers(nums: list):
     """
