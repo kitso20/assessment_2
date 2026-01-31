@@ -150,7 +150,12 @@ def break_test(n: int, length: int):
     Returns:
     list: A list of integers from 1 to length, excluding n and stopping before it.
     """
-    pass
+    l = []
+    for num in range(1,length):
+        if num == n:
+            break
+        l.append(num)
+    return l
 
 def sum_numbers_until_zero(nums: list):
     """
