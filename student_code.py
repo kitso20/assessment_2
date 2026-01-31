@@ -124,7 +124,7 @@ def sum_multiples_of_num(num: int, length: int):
     Returns:
     int: The sum of multiples of num from 1 to length.
     """
-    # return sum([n for n in range(1,length) if n % num == 0])
+    return sum([n for n in range(1,((length+1)*num)) if n % num == 0])
 
 def skip_num(n: int, length: int):
     """
