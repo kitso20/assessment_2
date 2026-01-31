@@ -137,7 +137,7 @@ def skip_num(n: int, length: int):
     Returns:
     list: A list of integers from 1 to length, excluding n.
     """
-    pass
+    return [ num for num in range(1,length+1) if num != n]
 
 def break_test(n: int, length: int):
     """
