@@ -85,7 +85,7 @@ def rank_students(students: list[tuple[str, int]]):
     Returns:
     list: A sorted list of tuples in descending order based on scores.
     """
-    pass
+    return [(k,v) for k,v in sorted(students,key=lambda item:item[1],reverse=True)]
 
 """Learning Outcome: Basic Loops"""
 def even_numbers(n: int):
