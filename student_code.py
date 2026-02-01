@@ -62,7 +62,7 @@ def analyze_improvement(scores: list):
           and a boolean indicating whether there has been an improvement.
     """
     trend = ''
-    if scores[0]>scores[1]:
+    if scores[0]<scores[1]:
         trend = "positive" 
     elif scores[0]==scores[1]:
         trend = "neutral"
